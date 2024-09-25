@@ -41,7 +41,9 @@ Eigen::Matrix4f get_model_matrix(float rotation_angle)
 Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
     float zNear, float zFar)
 {
-    // Students will implement this function
+    //aspect_ratio即宽高比=width/height
+    //sye_fov -> field of view 视场角
+    //zNear,zFar近，远面的z坐标
     Eigen::Matrix4f projection = Eigen::Matrix4f::Identity();
     Eigen::Matrix4f PtoO = Eigen::Matrix4f::Identity();
     PtoO << zNear, 0.0, 0.0, 0.0,
